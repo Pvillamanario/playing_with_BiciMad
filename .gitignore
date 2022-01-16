@@ -1,3 +1,16 @@
+# Test
+test.py
+
+# Users+keys
+.env
+
+# Data
+data/
+
+# VSC
+
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -106,3 +119,6 @@ venv.bak/
 # OS stuff:
 .DS_Store
 .idea
+
+# Files and folders
+credentials/

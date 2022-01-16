@@ -1,99 +1,102 @@
-# Data Project README file
+<p align="left"><img src="https://cdn-images-1.medium.com/max/184/1*2GDcaeYIx_bQAZLxWM4PsQ@2x.png"></p>
 
-The README file describes the essence of the project playing the most important role. Most visitors will simply scroll down about twice on the README and leave if they are not interested. So, the README file should provide the reason **why** to checkout your project!!!). 
-Bearing that in mind, your job is to: 
-- Tell them what it is (with context).
-- Show them what it looks like in action.
-- Show them how they use it.
-- Tell them any other relevant details.
+# __ih_datamadpt1121_project_m1__
 
-![Image](https://res.cloudinary.com/springboard-images/image/upload/q_auto,f_auto,fl_lossy/wordpress/2019/05/aiexcerpt.png)
+Ironhack Madrid - Data Analytics Part Time - November 2021 - Project Module 1
+
+## **Data:**
+
+There are 2 main datasources:
+
+- **Azure SQL Database.** The database contains information from the BiciMAD stations including their location (i.e.: latitude / longitude). In order to access the database you may need the following credentials:
+```
+Server name:   sqlironhack
+Database:      BiciMAD
+```
+> __IMPORTANT =>__ Username and password will be provided in class.
+
+
+- **API REST.** We will use the API REST from the [Portal de datos abiertos del Ayuntamiento de Madrid](https://datos.madrid.es/nuevoMadrid/swagger-ui-master-2.2.10/dist/index.html?url=/egobfiles/api.datos.madrid.es.json#/), where you can find the __Catálogo de datos__ with more than 70 datasets.
+
+> __IMPORTANT =>__ Specific datasets will be assigned to each student in order to perform the challenges.
+
 
 ---
 
-## **Formatting**
-Your readers will most likely view your README in a browser so please keep that in mind when formatting its content: 
-- Use proper format when necesary (e.g.: `import pandas as pd`). 
-- Categorize content using two or three levels of header beneath. 
-- Make use of **emphasis** to call out important words. 
-- Link to project pages for related libraries you mention. Link to Wikipedia, Wiktionary, even Urban Dictionary definitions for words of which a reader may not be familiar. Make amusing cultural references. 
-- Add links to related projects or services. 
+## **Main Challenge:**
 
-> Here you have a markdown cheatsheet [Link](https://commonmark.org/help/) and tutorial [Link](https://commonmark.org/help/tutorial/).
+You must create a Python App (**Data Pipeline**) that allow their potential users to find the nearest BiciMAD station to a set of places of interest. The output table should look similar to:
 
-
-## **Start writing ASAP:**
-*Last but not least, by writing your README soon you give yourself some pretty significant advantages. Most importantly, you’re giving yourself a chance to think through the project without the overhead of having to change code every time you change your mind about how something should be organized or what should be included.*
+| Place of interest | Type of place (*) | Place address | BiciMAD station | Station location |
+|---------|----------|-------|------------|----------|
+| Auditorio Carmen Laforet (Ciudad Lineal)   | Centros Culturales | Calle Jazmin, 46 | Legazpi | Calle Bolívar, 3 |
+| Centro Comunitario Casino de la Reina | Centros municipales de enseñanzas artísticas | Calle Casino, 3 | Chamartin | Calle Rodríguez Jaén, 40 |
+| ...     | ...            | ...        | ...      | ...        |
+> __(*)__ There is a list of datasets each one with different places. A specific dataset will be assigned to each student. 
 
 
-## **Suggested Structure:**
+**Your project must meet the following requirements:**
 
-### :raising_hand: **Name** 
-Self-explanatory names are best. If the name sounds too vague or unrelated, it may be a signal to move on. It also must be catchy. Images, Logo, Gif or some color is strongly recommended.
+- It must be contained in a GitHub repository which includes a README file that explains the aim and content of your code. You may follow the structure suggested [here](https://github.com/potacho/data-project-template).
 
-### :baby: **Status**
-Alpha, Beta, 1.1, Ironhack Data Analytics Final Project, etc... It's OK to write a sentence, too. The goal is to let interested people know where this project is at.
+- It must create, at least, a `.csv` file including the requested table (i.e. Main Challenge). Alternatively, you may create an image, pdf, plot or any other output format that you may find convenient. You may also send your output by e-mail, upload it to a cloud repository, etc. 
 
-### :running: **One-liner**
-Having a one-liner that describes the pipeline/api/app is useful for getting an idea of what your code does in slightly greater detail. 
+- It must provide, at least, two options for the final user to select when executing using `argparse`: **(1)** To get the table for every 'Place of interest' included in the dataset (or a set of them), **(2)** To get the table for a specific 'Place of interest' imputed by the user.
 
-### :computer: **Technology stack**
-Python, Pandas, Scipy, Scikit-learn, etc. Indicate the technological nature of the software, including primary programming language(s), main libraries and whether the software is intended as standalone or as a module in a framework or other ecosystem.
+**Additionally:**
 
-### :boom: **Core technical concepts and inspiration**
-Why does it exist? Frame your project for the potential user. Compare/contrast your project with other, similar projects so the user knows how it is different from those projects. Highlight the technical concepts that your project demonstrates or supports. Keep it very brief.
+- You must prepare a 4 minutes presentation (ppt, canva, etc.) to explain your project (Instructors will provide further details about the content of the presentation).
 
-### :wrench: **Configuration**
-Requeriments, prerequisites, dependencies, installation instructions.
+- The last slide of your presentation must include your candidate for the **'Ironhack Data Code Beauty Pageant'**. 
 
-### :see_no_evil: **Usage**
-Parameters, return values, known issues, thrown errors.
-
-### :file_folder: **Folder structure**
-```
-└── project
-    ├── __trash__
-    ├── .gitignore
-    ├── .env
-    ├── requeriments.txt
-    ├── README.md
-    ├── main_script.py
-    ├── notebooks
-    │   ├── notebook1.ipynb
-    │   └── notebook2.ipynb
-    ├── package1
-    │   ├── module1.py
-    │   └── module2.py
-    └── data
-        ├── raw
-        ├── processed
-        └── results
-```
-
-> Do not forget to include `__trash__` and `.env` in `.gitignore` 
-
-### :shit: **ToDo**
-Next steps, features planned, known bugs (shortlist).
-
-### :information_source: **Further info**
-Credits, alternatives, references, license.
-
-### :love_letter: **Contact info**
-Getting help, getting involved, hire me please.
 
 ---
 
-> Here you have some repo examples:
-- [Mamba (OCR-Translator-Assistant)](https://github.com/YonatanRA/OCR-translator-assistant-project)
-- [Art Classification](https://github.com/serguma/art_classification)
-- [OSNet-IBN (width x 1.0) Lite](https://github.com/RodMech/OSNet-IBN1-Lite)
-- [Movie Founder](https://github.com/Alfagu/final-project-Ironhack-0419mad)
-- [Convolutional Neural Network to detect Pneumonia](https://github.com/jmolins89/final-project)
-- [Brain tumor detection project](https://github.com/alonsopdani/brain-tumor-detection-project)
-- [Policy-Gradient-Methods](https://github.com/cyoon1729/Policy-Gradient-Methods)
+### **Bonus 1:**
 
-> Here you have some tools and references:
-- [Make a README](https://www.makeareadme.com/)
-- [Awesome README](https://github.com/matiassingers/awesome-readme)
-- [Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+You may include in your table the availability of bikes in each station.
+
+---
+
+### **Bonus 2:**
+
+You may improve the usability of your app by using [FuzzyWuzzy](https://pypi.org/project/fuzzywuzzy/).
+
+---
+
+### **Bonus 3:**
+
+Feel free to enrich your output data with any data you may find relevant (e.g.: wiki info for every place of interest).
+
+--- 
+
+## **Project Main Stack**
+
+- [Azure SQL Database](https://portal.azure.com/)
+
+- [SQL Alchemy](https://docs.sqlalchemy.org/en/13/intro.html) (alternatively you can use _Azure Data Studio_)
+
+- [Requests](https://requests.readthedocs.io/)
+
+- [Pandas](https://pandas.pydata.org/pandas-docs/stable/reference/index.html)
+
+- Module `geo_calculations.py`
+
+- [Argparse](https://docs.python.org/3.7/library/argparse.html)
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+ 
 
